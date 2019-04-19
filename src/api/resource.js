@@ -4,7 +4,7 @@ const apiMusic = {
   loginCellphone: '/api/login/cellphone',  // 手机登陆
   userPlaylist: '/api/user/playlist',  // 获取用户歌单
   playlistDetail: '/api/playlist/detail',  // 获取歌单详情
-  musicUrl: '/api/music/url', // 获取音乐url
+  musicUrl: '/api/song/url', // 获取音乐url
   search: '/api/search',  // 搜素音乐
   lyric: '/api/lyric',  // 获取歌词
   comment: '/api/comment',  // 获取评论

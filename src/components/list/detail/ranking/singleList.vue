@@ -25,8 +25,8 @@
         this.$store.commit('pause');
         let audio = {};
         audio.id = song.id;  // id
-        audio.singer = song.album.name; // 演唱者
-        audio.albumPic = song.album.picUrl; // 专辑图片
+        audio.singer = song.al.name; // 演唱者
+        audio.albumPic = song.al.picUrl; // 专辑图片
         audio.name = song.name;
         // 通过Vuex改变状态
         this.$store.commit('addToList', audio);
