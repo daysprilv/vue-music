@@ -143,7 +143,7 @@
     },
     computed: {
       playListImage() {
-        return '' || (this.playlist.picUrl);
+        return '' || (this.playlist.coverImgUrl);
       },
       creatorImage() {
         return '' || this.creator.avatarUrl;

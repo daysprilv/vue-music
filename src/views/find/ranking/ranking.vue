@@ -67,8 +67,8 @@
       // 获取飙升榜信息
       getSurgeList() {
         api.getTopListResource(3).then((response) => {
-          this.surgeInfo = response.data.result;
-          this.surgeList = response.data.result.tracks.slice(0, 3);
+          this.surgeInfo = response.data.playlist;
+          this.surgeList = response.data.playlist.tracks.slice(0, 3);
         })
         .catch((response) => {
           console.log(response);
@@ -77,8 +77,8 @@
       // 获取新歌榜信息
       getNewSongesList() {
         api.getTopListResource(0).then((response) => {
-          this.newSongesInfo = response.data.result;
-          this.newSongesList = response.data.result.tracks.slice(0, 3);
+          this.newSongesInfo = response.data.playlist;
+          this.newSongesList = response.data.playlist.tracks.slice(0, 3);
         })
         .catch((response) => {
           console.log(response);
@@ -87,8 +87,8 @@
       // 获取原创榜信息
       getOriginalList() {
         api.getTopListResource(2).then((response) => {
-          this.originalInfo = response.data.result;
-          this.originalList = response.data.result.tracks.slice(0, 3);
+          this.originalInfo = response.data.playlist;
+          this.originalList = response.data.playlist.tracks.slice(0, 3);
         })
         .catch((response) => {
           console.log(response);
@@ -97,8 +97,8 @@
       // 获取热歌榜信息
       getHotList() {
         api.getTopListResource(1).then((response) => {
-          this.hotInfo = response.data.result;
-          this.hotList = response.data.result.tracks.slice(0, 3);
+          this.hotInfo = response.data.playlist;
+          this.hotList = response.data.playlist.tracks.slice(0, 3);
         })
         .catch((response) => {
           console.log(response);

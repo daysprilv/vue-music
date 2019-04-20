@@ -41,7 +41,7 @@
       getPlayListDetail () {
         this.$store.commit('update_loading', true);
         api.getPlaylistDetailResource(this.$route.params.id).then((response) => {
-          this.imgUrl = response.data.playlist.picUrl;
+          this.imgUrl = response.data.playlist.coverImgUrl;
           this.title = response.data.playlist.name;
           this.author = response.data.playlist.creator.nickname;
           // $nextTick() 在dom 重新渲染完后执行

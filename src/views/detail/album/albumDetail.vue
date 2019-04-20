@@ -35,7 +35,7 @@
       contentChange () {
         let content = '';
         content = this.data.description;
-        if (content !== undefined) {
+        if (content != null && content !== undefined) {
           content = content.replace(/\r\n/g, '<br/>');
           content = content.replace(/\n/g, '<br/>');
           return content;

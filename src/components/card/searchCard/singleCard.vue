@@ -2,8 +2,8 @@
   <li class="single-card" @click="playAudio(data)">
     <p class="song-name" style="-webkit-box-orient: vertical;">{{data.name}}<span class="transNames">{{songNameTrans}}</span></p>
     <p class="source">
-      <span class="singer">{{data.artists[0].name}}-</span>
-      <span class="album">{{data.album.name}}</span>
+      <span class="singer">{{data.ar[0].name}}-</span>
+      <span class="album">{{data.al.name}}</span>
       <span class="transNames">{{albumTrans}}</span>
     </p>
   </li>
@@ -23,8 +23,8 @@
         this.$store.commit('pause');
         let audio = {};
         audio.id = song.id;  // id
-        audio.singer = song.artists.name; // 演唱者
-        audio.albumPic = song.album.picUrl;
+        audio.singer = song.ar.name; // 演唱者
+        audio.albumPic = song.al.picUrl;
         audio.name = song.name;
         // 通过Vuex改变状态
         this.$store.commit('addToList', audio);
