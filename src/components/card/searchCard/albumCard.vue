@@ -3,7 +3,7 @@
         <img v-lazy="albumImage + '?param=200y200'" lazy="loading" class="album-image">
         <div class="album-info">
             <p class="album-name" style="-webkit-box-orient: vertical;">{{data.name}}<span class="trans">{{albumTrans}}</span></p>
-            <p class="album-author">{{data.artist.name}}</p>
+            <p class="album-author">{{data.artists.name}}</p>
         </div>
     </li>
 </template>

@@ -1,6 +1,8 @@
 <template>
   <div class="playlist-find" @click="jumpPlayListsDetail(data.id)">
-    <img v-lazy="data.coverImgUrl + '?param=500y500'" lazy="loading">
+    <img :src="data.coverImgUrl + '?param=500y500'">
+    <!--当懒加载时div下图片源地址不会更新，故此处不适用懒加载-->
+    <!--<img v-lazy="data.coverImgUrl + '?param=500y500'" lazy="loading">-->
     <h1 style="-webkit-box-orient: vertical;">{{data.name}}</h1>
     <p>by {{data.creator.nickname}}</p>
   </div>
