@@ -78,7 +78,8 @@
           this.mvDetail = data;
           this.video.poster = data.cover;
           this.$root.$emit('change-poster', this.video.poster);
-          this.video.source = '/api/mv/url?url=' + data.brs[240];
+          // 分辨率240P
+          this.video.source = data.brs[240];
           this.$root.$emit('change-source', this.video.source);
         }).catch((error) => {
           console.log(error);
