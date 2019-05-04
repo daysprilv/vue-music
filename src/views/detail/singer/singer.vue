@@ -72,8 +72,8 @@
         this.$store.commit('update_loading', true);
         api.getArtistDescResource(this.$route.params.id)
           .then((response) => {
+            // 歌手相关文章信息
             if (response.data.topicData) {
-              this.userId = response.data.topicData[0].creator.userId;
             }
             // $nextTick() 在dom 重新渲染完后执行
             this.$nextTick(() => {
@@ -88,6 +88,7 @@
       getSingerSingle () {
         api.getArtistsResource(this.$route.params.id)
           .then((response) => {
+            this.userId = response.data.artist.accountId;
             this.singerInfo = response.data.artist;
             this.hotSongs = response.data.hotSongs;
           })
@@ -139,6 +140,8 @@
 
     .vux-swiper {
         height: 100%;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .vux-slider {
